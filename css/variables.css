@@ -1,0 +1,66 @@
+/* ============================================================
+   Design tokens — cambia aquí y se propaga a todo el sitio.
+   ============================================================ */
+:root {
+  /* Colores de marca */
+  --color-navy: #071927;
+  --color-navy-soft: #0e2235;
+  --color-navy-footer: #040f18;
+  --color-cyan: #00afaa;
+  --color-blue: #0077b6;
+  --color-blue-dark: #023e8a;
+  /* CTA: coral cálido, elegido para armonizar con el teal principal
+     (complementario de su matiz) en vez del naranja puro original. */
+  --color-orange: #ff6a3d;
+  --color-orange-dark: #c2451f;
+  --color-orange-grad: #e85a35;
+  --color-whatsapp: #25d366;
+  --color-tiktok: #ff0050;
+  --color-youtube: #ff0000;
+  --color-gold: #fbbf24;
+
+  /* Escala de grises (sobre fondo claro) */
+  --color-white: #ffffff;
+  --color-slate-50: #f8fafc;
+  --color-slate-200: #e2e8f0;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-900: #071927;
+
+  /* Tipografía */
+  --font-heading: "Plus Jakarta Sans", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  /* Solo 3 tamaños de texto en todo el sitio: título, subtítulo y texto. */
+  --fs-title: clamp(1.75rem, 1.3rem + 2.2vw, 2.5rem); /* 28px – 40px */
+  --fs-subtitle: 1.125rem; /* 18px */
+  --fs-text: 0.9375rem; /* 15px */
+
+  /* Layout */
+  --container-max: 1280px;
+  --px: 20px;
+  --section-py: 64px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+
+  /* Sombras */
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.06);
+  --shadow-cta: 0 8px 28px rgba(255, 106, 61, 0.42);
+}
+
+@media (min-width: 640px) {
+  :root {
+    --px: 32px;
+    --section-py: 80px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --px: 48px;
+    --section-py: 92px;
+  }
+}

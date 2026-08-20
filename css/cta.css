@@ -1,0 +1,109 @@
+/* ============================================================
+   Bloque de cierre — CTA oscuro con botón de WhatsApp
+   ============================================================ */
+.cta-block {
+  background: var(--color-navy);
+  border-radius: 18px;
+  padding: 36px 22px;
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 640px) {
+  .cta-block {
+    border-radius: 24px;
+    padding: 60px 56px;
+  }
+}
+
+.cta-block__glow-a {
+  position: absolute;
+  top: -80px;
+  right: -60px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(0, 175, 170, 0.14) 0%, transparent 68%);
+  pointer-events: none;
+}
+
+.cta-block__glow-b {
+  position: absolute;
+  bottom: -100px;
+  left: -40px;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(0, 119, 182, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.cta-block__intro {
+  position: relative;
+  text-align: center;
+  margin-bottom: 32px;
+}
+@media (min-width: 640px) {
+  .cta-block__intro {
+    margin-bottom: 44px;
+  }
+}
+
+.cta-block__intro h2 {
+  font-size: var(--fs-title);
+  font-weight: 800;
+  margin-bottom: 10px;
+  line-height: 1.18;
+}
+
+.cta-block__intro-accent {
+  color: var(--color-cyan);
+  text-shadow: 0 0 30px rgba(0, 175, 170, 0.4);
+}
+
+.cta-block__intro p {
+  color: var(--color-slate-400);
+  font-size: var(--fs-text);
+  line-height: 1.65;
+}
+
+.cta-block__body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.cta-block__whatsapp {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 28px;
+  border-radius: 12px;
+  font-size: var(--fs-text);
+  white-space: nowrap;
+}
+
+.cta-block__whatsapp-title {
+  font-weight: 800;
+}
+
+.cta-block__whatsapp-sub {
+  display: flex;
+  align-items: center;
+  font-size: var(--fs-text);
+  font-weight: 400;
+  opacity: 0.85;
+  margin-top: 1px;
+}
+
+.cta-block__whatsapp-badge {
+  position: absolute;
+  top: -14px;
+  right: -10px;
+  background: var(--color-cyan);
+  color: var(--color-navy);
+  font-size: var(--fs-text);
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 100px;
+  letter-spacing: 0.6px;
+}

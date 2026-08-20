@@ -1,0 +1,227 @@
+/* ============================================================
+   Malla curricular — tabs por módulo/año
+   ============================================================ */
+.curriculum {
+  background: var(--color-white);
+  color: var(--color-navy);
+}
+
+.curriculum__intro {
+  text-align: center;
+  margin-bottom: 32px;
+}
+@media (min-width: 640px) {
+  .curriculum__intro {
+    margin-bottom: 48px;
+  }
+}
+
+.curriculum__intro p {
+  font-size: var(--fs-text);
+  color: var(--color-slate-500);
+  max-width: 540px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.tab-strip {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: none;
+  margin-bottom: 28px;
+}
+.tab-strip::-webkit-scrollbar {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .tab-strip {
+    justify-content: center;
+    margin-bottom: 44px;
+  }
+}
+
+.tab-strip__btn {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 18px;
+  border-radius: 100px;
+  border: 2px solid var(--color-slate-200);
+  background: transparent;
+  color: var(--color-slate-500);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--fs-text);
+  transition: all 0.22s;
+}
+
+.tab-strip__btn[aria-selected="true"] {
+  border-color: var(--module-color);
+  background: var(--module-color);
+  color: var(--module-text, var(--color-navy));
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--module-color) 22%, transparent);
+}
+
+.module-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .module-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+}
+
+.module-panel__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: color-mix(in srgb, var(--module-color) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--module-color) 19%, transparent);
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: var(--fs-text);
+  font-weight: 700;
+  color: var(--module-color);
+  margin-bottom: 16px;
+}
+
+.module-panel__title {
+  font-size: var(--fs-subtitle);
+  font-weight: 800;
+  color: var(--color-navy);
+  margin: 0 0 18px;
+  line-height: 1.3;
+}
+
+.module-panel__courses {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.module-panel__courses li {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 12px 16px;
+  background: var(--color-slate-50);
+  border: 1px solid var(--color-slate-200);
+  border-radius: 10px;
+  font-size: var(--fs-text);
+  color: var(--color-slate-700);
+  font-weight: 500;
+}
+
+.module-panel__courses li::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--module-color);
+  flex-shrink: 0;
+  box-shadow: 0 0 8px color-mix(in srgb, var(--module-color) 60%, transparent);
+}
+
+.module-panel__cert {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 15px 18px;
+  background: color-mix(in srgb, var(--module-color) 5%, transparent);
+  border: 1.5px solid color-mix(in srgb, var(--module-color) 25%, transparent);
+  border-radius: 13px;
+}
+
+.module-panel__cert-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.module-panel__cert-label {
+  font-size: var(--fs-text);
+  font-weight: 800;
+  color: var(--module-color);
+  letter-spacing: 0.4px;
+  margin-bottom: 3px;
+  text-transform: uppercase;
+}
+
+.module-panel__cert-value {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: var(--fs-text);
+  color: var(--color-navy);
+}
+
+.module-panel__media {
+  display: none;
+}
+@media (min-width: 640px) {
+  .module-panel__media {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+  .module-panel__media img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .module-panel__media img {
+    height: 420px;
+  }
+}
+
+.module-panel__media-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: linear-gradient(to top, rgba(7, 25, 39, 0.6) 0%, transparent 50%);
+}
+
+.download-syllabus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  width: 100%;
+  padding: 14px 18px;
+  background: var(--color-navy);
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--fs-text);
+  text-decoration: none;
+}
+
+@media (min-width: 640px) {
+  .download-syllabus {
+    position: absolute;
+    bottom: 14px;
+    left: 14px;
+    right: 14px;
+    width: auto;
+    padding: 13px 18px;
+    background: rgba(7, 25, 39, 0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1.5px solid rgba(255, 255, 255, 0.14);
+    border-radius: 11px;
+  }
+}

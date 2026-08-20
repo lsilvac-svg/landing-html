@@ -1,0 +1,44 @@
+/* ============================================================
+   Barra fija inferior (solo móvil), aparece al hacer scroll
+   ============================================================ */
+.sticky-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  display: flex;
+  gap: 10px;
+  background: rgba(4, 15, 24, 0.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(0, 175, 170, 0.15);
+  padding: 10px 16px 14px;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.sticky-bar.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@media (min-width: 640px) {
+  .sticky-bar {
+    display: none;
+  }
+}
+
+.sticky-bar__whatsapp {
+  flex: 1;
+  padding: 13px;
+  font-size: var(--fs-text);
+}
+
+.sticky-bar__cta {
+  flex: 2;
+  padding: 13px;
+  font-size: var(--fs-text);
+  letter-spacing: 0.2px;
+}
