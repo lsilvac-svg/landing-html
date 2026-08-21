@@ -1,9 +1,6 @@
 // Punto de entrada: inicializa cada módulo de interacción de la página.
-import { initHeroForm } from "./heroForm.js";
-import { initCurriculumTabs } from "./curriculumTabs.js";
-import { initGallery } from "./gallery.js";
-import { initFaqAccordion } from "./faqAccordion.js";
-import { initStickyBar } from "./stickyBar.js";
+// Se carga al final, después de utils.js/heroForm.js/curriculumTabs.js/gallery.js/
+// faqAccordion.js/stickyBar.js, así que sus funciones init* ya existen aquí.
 
 initHeroForm();
 initCurriculumTabs();

@@ -19,7 +19,7 @@
 .partners__label {
   font-size: var(--fs-text);
   font-weight: 700;
-  color: var(--color-slate-400);
+  color: var(--color-slate-500);
   letter-spacing: 0.6px;
   margin-bottom: 22px;
   text-transform: uppercase;
@@ -52,6 +52,13 @@
   border: 1px solid var(--color-slate-200);
   border-radius: 13px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+@media (min-width: 1024px) {
+  .partners__item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(7, 25, 39, 0.1);
+  }
 }
 @media (min-width: 640px) {
   .partners__item {
@@ -75,7 +82,7 @@
 
 .partners__status {
   font-size: var(--fs-text);
-  color: var(--color-slate-400);
+  color: var(--color-slate-500);
   font-weight: 600;
 }
 .partners__item--highlight .partners__status {
@@ -110,10 +117,17 @@
   padding: 22px 18px;
   border: 1px solid var(--color-slate-200);
   box-shadow: var(--shadow-card);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 @media (min-width: 640px) {
   .testimonial-card {
     padding: 30px 32px;
+  }
+}
+@media (min-width: 1024px) {
+  .testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(7, 25, 39, 0.12);
   }
 }
 
@@ -186,11 +200,13 @@
 
 .testimonial-card__cohort {
   font-size: var(--fs-text);
-  color: var(--color-slate-400);
+  color: var(--color-slate-500);
 }
 
 .testimonial-card__stars {
-  color: var(--color-gold);
+  /* Un dorado más oscuro que --color-gold: ese tono, pensado para
+     fondos oscuros, se ve muy pálido sobre esta tarjeta blanca. */
+  color: #b3790a;
   font-size: 14px;
   margin-bottom: 12px;
   letter-spacing: 2px;

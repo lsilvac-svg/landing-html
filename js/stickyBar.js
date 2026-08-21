@@ -1,21 +1,21 @@
 // Barra fija inferior en móvil: aparece luego de bajar el hero.
-import { qs } from "./utils.js";
+// Depende de qs definido en utils.js (cargado antes que este archivo).
 
-const SHOW_AFTER_PX = 480;
-const MOBILE_QUERY = "(max-width: 639px)";
+const STICKY_BAR_SHOW_AFTER_PX = 480;
+const STICKY_BAR_MOBILE_QUERY = "(max-width: 639px)";
 
-export function initStickyBar() {
+function initStickyBar() {
   const bar = qs("#sticky-bar");
   if (!bar) return;
 
-  const isMobile = () => window.matchMedia(MOBILE_QUERY).matches;
+  const isMobile = () => window.matchMedia(STICKY_BAR_MOBILE_QUERY).matches;
 
   const onScroll = () => {
     if (!isMobile()) {
       bar.classList.remove("is-visible");
       return;
     }
-    bar.classList.toggle("is-visible", window.scrollY > SHOW_AFTER_PX);
+    bar.classList.toggle("is-visible", window.scrollY > STICKY_BAR_SHOW_AFTER_PX);
   };
 
   window.addEventListener("scroll", onScroll, { passive: true });

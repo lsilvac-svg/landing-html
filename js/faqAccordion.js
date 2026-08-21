@@ -1,7 +1,7 @@
 // Acordeón de preguntas frecuentes: una pregunta abierta a la vez.
-import { qsa } from "./utils.js";
+// Depende de qsa definido en utils.js (cargado antes que este archivo).
 
-export function initFaqAccordion() {
+function initFaqAccordion() {
   const items = qsa(".faq-item");
   if (!items.length) return;
 

@@ -1,7 +1,7 @@
 // Tabs de la malla curricular: muestra un único panel de módulo a la vez.
-import { qs, qsa } from "./utils.js";
+// Depende de qsa definido en utils.js (cargado antes que este archivo).
 
-export function initCurriculumTabs() {
+function initCurriculumTabs() {
   const tabs = qsa(".tab-strip__btn");
   const panels = qsa(".module-panel");
   if (!tabs.length || !panels.length) return;

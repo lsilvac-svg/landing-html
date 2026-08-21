@@ -61,6 +61,9 @@
 .tab-strip__btn[aria-selected="true"] {
   border-color: var(--module-color);
   background: var(--module-color);
+  /* Cada color de módulo necesita su propio texto para pasar 4.5:1:
+     navy sobre el teal (claro), blanco sobre el azul y el naranja
+     (ambos más oscuros) — --module-text se define por botón abajo. */
   color: var(--module-text, var(--color-navy));
   box-shadow: 0 6px 18px color-mix(in srgb, var(--module-color) 22%, transparent);
 }
@@ -79,6 +82,13 @@
   }
 }
 
+/* El atributo HTML `hidden` tiene menor prioridad que una clase con la
+   misma especificidad — sin esta regla, "display: flex/grid" de arriba
+   lo pisa y los 3 módulos se ven apilados en vez de solo el activo. */
+.module-panel[hidden] {
+  display: none;
+}
+
 .module-panel__eyebrow {
   display: inline-flex;
   align-items: center;
@@ -89,7 +99,10 @@
   padding: 6px 14px;
   font-size: var(--fs-text);
   font-weight: 700;
-  color: var(--module-color);
+  /* El color del módulo tal cual (teal/naranja) es demasiado claro para
+     leerse sobre este fondo casi blanco — se oscurece mezclándolo con
+     el navy, conservando el matiz de cada módulo. */
+  color: color-mix(in srgb, var(--module-color) 70%, var(--color-navy));
   margin-bottom: 16px;
 }
 
@@ -144,14 +157,14 @@
 }
 
 .module-panel__cert-icon {
-  font-size: 24px;
   flex-shrink: 0;
+  color: var(--module-color);
 }
 
 .module-panel__cert-label {
   font-size: var(--fs-text);
   font-weight: 800;
-  color: var(--module-color);
+  color: color-mix(in srgb, var(--module-color) 70%, var(--color-navy));
   letter-spacing: 0.4px;
   margin-bottom: 3px;
   text-transform: uppercase;

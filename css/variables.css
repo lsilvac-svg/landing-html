@@ -9,11 +9,16 @@
   --color-cyan: #00afaa;
   --color-blue: #0077b6;
   --color-blue-dark: #023e8a;
-  /* CTA: coral cálido, elegido para armonizar con el teal principal
-     (complementario de su matiz) en vez del naranja puro original. */
-  --color-orange: #ff6a3d;
-  --color-orange-dark: #c2451f;
-  --color-orange-grad: #e85a35;
+  /* CTA: terracota profundo. Lo suficientemente oscuro para que el
+     texto BLANCO (como en el diseño original) tenga contraste real
+     (≥4.5:1) — con el naranja claro anterior, el blanco quedaba en
+     ~2.9:1, casi ilegible. */
+  --color-orange: #c94a1d;
+  --color-orange-dark: #a83a16;
+  --color-orange-grad: #b8421a;
+  /* Variante clara del CTA: solo para texto/ícono naranja sobre fondos
+     oscuros (el tono profundo de arriba no se leería ahí). */
+  --color-orange-light: #ff8259;
   --color-whatsapp: #25d366;
   --color-tiktok: #ff0050;
   --color-youtube: #ff0000;
@@ -48,7 +53,7 @@
 
   /* Sombras */
   --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.06);
-  --shadow-cta: 0 8px 28px rgba(255, 106, 61, 0.42);
+  --shadow-cta: 0 8px 28px rgba(201, 74, 29, 0.45);
 }
 
 @media (min-width: 640px) {

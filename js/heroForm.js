@@ -1,9 +1,9 @@
 // Formulario del hero: selector de sede + envío por WhatsApp.
-import { qs, qsa, openWhatsApp } from "./utils.js";
+// Depende de qs/qsa/openWhatsApp definidos en utils.js (cargado antes que este archivo).
 
-const WHATSAPP_NUMBER = "51944123456";
+const HERO_WHATSAPP_NUMBER = "51944123456";
 
-export function initHeroForm() {
+function initHeroForm() {
   const form = qs("#hero-form");
   if (!form) return;
 
@@ -43,6 +43,6 @@ export function initHeroForm() {
       `Sede de interés: ${sedeLabel}\n` +
       `Turno de preferencia: ${turnoLabel || "No especificado"}`;
 
-    openWhatsApp(WHATSAPP_NUMBER, message);
+    openWhatsApp(HERO_WHATSAPP_NUMBER, message);
   });
 }

@@ -2,6 +2,7 @@
    Comunidad en redes sociales (TikTok / YouTube)
    ============================================================ */
 .social {
+  color: var(--color-white);
   background: #000;
 }
 
@@ -45,7 +46,7 @@
 }
 .social__followers span {
   font-size: var(--fs-text);
-  color: #475569;
+  color: var(--color-slate-400);
   margin-top: 3px;
 }
 
@@ -158,30 +159,53 @@
   gap: 6px;
 }
 
+/* En pantallas táctiles no existe :hover, así que los íconos quedan
+   siempre visibles. En dispositivos con mouse aparecen solo al pasar
+   el cursor sobre la tarjeta, como en el diseño original. */
+@media (hover: hover) and (pointer: fine) {
+  .video-card__links {
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+  .video-card:hover .video-card__links,
+  .video-card:focus-within .video-card__links {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .video-card__link {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--color-white);
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.65);
   backdrop-filter: blur(6px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   text-decoration: none;
+  transition: background-color 0.2s, transform 0.2s;
 }
-.video-card__link--tiktok:hover {
+.video-card__link:hover,
+.video-card__link:focus-visible {
+  transform: scale(1.08);
+}
+.video-card__link--tiktok:hover,
+.video-card__link--tiktok:focus-visible {
   background: #000;
 }
-.video-card__link--youtube:hover {
+.video-card__link--youtube:hover,
+.video-card__link--youtube:focus-visible {
   background: var(--color-youtube);
 }
 
 .social__hint {
   text-align: center;
   font-size: var(--fs-text);
-  color: #475569;
+  color: var(--color-slate-400);
   margin-top: 12px;
 }
 @media (min-width: 640px) {

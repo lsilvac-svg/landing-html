@@ -2,6 +2,7 @@
    Galería de vida estudiantil + lightbox
    ============================================================ */
 .gallery {
+  color: var(--color-white);
   background: var(--color-navy);
   padding-bottom: calc(var(--section-py) - 12px);
 }
@@ -27,7 +28,7 @@
   .gallery__header p {
     display: block;
     font-size: var(--fs-text);
-    color: var(--color-slate-500);
+    color: var(--color-slate-400);
     max-width: 280px;
     line-height: 1.65;
   }
@@ -171,7 +172,7 @@
 .gallery__hint {
   text-align: center;
   font-size: var(--fs-text);
-  color: #475569;
+  color: var(--color-slate-400);
   margin-top: 12px;
 }
 @media (min-width: 640px) {
@@ -258,7 +259,7 @@
   font-weight: 600;
 }
 .lightbox__caption p:last-child {
-  color: #475569;
+  color: var(--color-slate-400);
   font-size: var(--fs-text);
   margin: 0;
 }

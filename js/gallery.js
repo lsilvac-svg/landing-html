@@ -1,7 +1,7 @@
 // Lightbox de la galería: abre la imagen en grande y permite navegar.
-import { qs, qsa } from "./utils.js";
+// Depende de qs/qsa definidos en utils.js (cargado antes que este archivo).
 
-export function initGallery() {
+function initGallery() {
   const items = qsa(".gallery__item");
   const lightbox = qs("#lightbox");
   if (!items.length || !lightbox) return;

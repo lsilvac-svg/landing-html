@@ -9,6 +9,7 @@
   z-index: 200;
   display: flex;
   gap: 10px;
+  color: var(--color-white);
   background: rgba(4, 15, 24, 0.97);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
