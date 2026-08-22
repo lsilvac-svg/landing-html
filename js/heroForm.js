@@ -8,38 +8,60 @@ function initHeroForm() {
   if (!form) return;
 
   const sedeButtons = qsa(".sede-toggle__btn", form);
-  let selectedSede = sedeButtons.find((b) => b.getAttribute("aria-pressed") === "true")?.dataset.sede ?? "";
 
-  sedeButtons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      sedeButtons.forEach((b) => b.setAttribute("aria-pressed", "false"));
-      btn.setAttribute("aria-pressed", "true");
-      selectedSede = btn.dataset.sede;
+  let selectedSede =
+    sedeButtons.find(
+      (button) => button.getAttribute("aria-pressed") === "true"
+    )?.dataset.sede ?? "";
+
+  // Selector de sede
+  sedeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      sedeButtons.forEach((item) => {
+        item.setAttribute("aria-pressed", "false");
+      });
+
+      button.setAttribute("aria-pressed", "true");
+      selectedSede = button.dataset.sede;
     });
   });
 
+  // Selector de turno
   const select = qs("#hero-turno", form);
+
   select?.addEventListener("change", () => {
     select.classList.toggle("has-value", Boolean(select.value));
   });
 
+  // Envío del formulario
   form.addEventListener("submit", (event) => {
     event.preventDefault();
 
     const name = qs("#hero-name", form).value.trim();
     const phone = qs("#hero-phone", form).value.trim();
-    const turnoLabel = select?.value ? select.selectedOptions[0].text : "";
-    const sedeLabel = selectedSede === "sanisidro" ? "San Isidro" : "Ate";
+    const email = qs("#hero-email", form).value.trim();
 
-    if (!name || !phone) {
+    const turnoLabel = select?.value
+      ? select.selectedOptions[0].text
+      : "";
+
+    const sedeLabel =
+      selectedSede === "sanisidro"
+        ? "San Isidro"
+        : "Ate";
+
+    // Validación
+    if (!name || !phone || !email || !form.checkValidity()) {
       form.reportValidity();
       return;
     }
 
+    // Mensaje que se enviará por WhatsApp
     const message =
       `Hola, quiero información sobre Enfermería Técnica en el IESRP.\n` +
       `Nombre: ${name}\n` +
       `Celular: ${phone}\n` +
+      `Correo: ${email}\n` +
       `Sede de interés: ${sedeLabel}\n` +
       `Turno de preferencia: ${turnoLabel || "No especificado"}`;
 
