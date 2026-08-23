@@ -1,215 +1,153 @@
 /* ============================================================
-   Comunidad en redes sociales (TikTok / YouTube)
+   Comunidad en redes — carrusel móvil, grid responsive
    ============================================================ */
 .social {
-  color: var(--color-white);
-  background: #000;
+  color: var(--color-navy);
+  background: #fff;
 }
 
 .social__header {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-  margin-bottom: 24px;
-}
-@media (min-width: 640px) {
-  .social__header {
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-between;
-    margin-bottom: 48px;
-  }
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 14px;
+  margin-bottom: 26px;
+  text-align: center;
 }
 
+.social__header > div:first-child { min-width: 0; }
 .social__badge {
-  background: rgba(255, 0, 80, 0.08);
-  border: 1px solid rgba(255, 0, 80, 0.22);
-  color: var(--color-tiktok);
-  margin-bottom: 14px;
+  margin-bottom: 12px;
+  color: var(--color-cyan-dark);
+  background: var(--color-cyan-pale);
+  border-color: rgba(8,170,165,.2);
 }
+.social .section-heading { max-width: 720px; margin-inline: auto; }
+.social .section-heading span { color: var(--color-cyan-dark) !important; }
 
 .social__followers {
-  display: none;
-}
-@media (min-width: 640px) {
-  .social__followers {
-    display: block;
-    text-align: right;
-  }
+  width: fit-content;
+  margin-inline: auto;
+  padding: 10px 14px;
+  border: 1px solid rgba(8,170,165,.13);
+  border-radius: 12px;
+  background: #f7fcfb;
 }
 .social__followers strong {
   display: block;
+  color: var(--color-cyan-dark);
   font-family: var(--font-heading);
-  font-size: var(--fs-title);
+  font-size: 1.2rem;
   font-weight: 800;
+  line-height: 1;
 }
-.social__followers span {
-  font-size: var(--fs-text);
-  color: var(--color-slate-400);
-  margin-top: 3px;
-}
+.social__followers span { display: block; margin-top: 4px; color: var(--color-slate-500); font-size: .68rem; }
 
 .social__grid {
+  width: 100%;
   display: flex;
   gap: 12px;
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+  overflow-y: hidden;
+  padding: 2px 0 12px;
   scroll-snap-type: x mandatory;
+  overscroll-behavior-inline: contain;
+  -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  padding-bottom: 4px;
 }
-.social__grid::-webkit-scrollbar {
-  display: none;
-}
-.social__grid > * {
-  scroll-snap-align: start;
-}
-
-@media (min-width: 640px) {
-  .social__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    overflow: visible;
-    gap: 14px;
-  }
-}
-@media (min-width: 1024px) {
-  .social__grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
+.social__grid::-webkit-scrollbar { display: none; }
 
 .video-card {
   position: relative;
-  flex-shrink: 0;
-  width: 52vw;
-  max-width: 200px;
-  border-radius: 16px;
+  flex: 0 0 min(74%, 270px);
+  width: min(74%, 270px);
+  min-width: 0;
   overflow: hidden;
-  aspect-ratio: 9 / 16;
-  background: #111;
+  border: 1px solid rgba(8,170,165,.13);
+  border-radius: 16px;
+  background: var(--color-navy);
+  box-shadow: var(--shadow-card);
+  aspect-ratio: 9 / 15;
+  scroll-snap-align: start;
 }
-@media (min-width: 640px) {
-  .video-card {
-    width: auto;
-    max-width: none;
-    border-radius: 18px;
-  }
-}
-
 .video-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.72);
+  filter: brightness(.76) saturate(.9);
+  transition: transform .3s ease;
 }
-
 .video-card__overlay {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 12px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 55%);
+  inset: auto 0 0;
+  padding: 16px 14px;
+  background: linear-gradient(180deg, transparent 0%, rgba(8,45,69,.93) 72%);
 }
-@media (min-width: 640px) {
-  .video-card__overlay {
-    padding: 20px 16px;
-  }
-}
-
-.video-card__views {
-  font-size: var(--fs-text);
-  color: var(--color-tiktok);
-  font-weight: 700;
-  margin-bottom: 4px;
-}
-
-.video-card__title {
-  margin: 0;
-  font-size: var(--fs-text);
-  font-weight: 700;
-  color: var(--color-white);
-  line-height: 1.4;
-}
-
+.video-card__views { margin-bottom: 4px; color: #7ff2ec; font-size: .7rem; font-weight: 800; }
+.video-card__title { margin: 0; color: #fff; font-size: .8rem; font-weight: 700; line-height: 1.4; }
 .video-card__live {
   position: absolute;
   top: 10px;
   left: 10px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 5px;
-  background: rgba(0, 0, 0, 0.65);
-  backdrop-filter: blur(6px);
-  border-radius: 100px;
-  padding: 4px 10px;
-  font-size: var(--fs-text);
+  padding: 5px 9px;
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(8,45,69,.66);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-size: .62rem;
   font-weight: 800;
-  color: var(--color-tiktok);
 }
-
-.video-card__links {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-/* En pantallas táctiles no existe :hover, así que los íconos quedan
-   siempre visibles. En dispositivos con mouse aparecen solo al pasar
-   el cursor sobre la tarjeta, como en el diseño original. */
-@media (hover: hover) and (pointer: fine) {
-  .video-card__links {
-    opacity: 0;
-    transform: translateY(-4px);
-    transition: opacity 0.2s ease, transform 0.2s ease;
-  }
-  .video-card:hover .video-card__links,
-  .video-card:focus-within .video-card__links {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
+.video-card__links { position: absolute; top: 10px; right: 10px; display: flex; flex-direction: column; gap: 7px; }
 .video-card__link {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.25);
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-white);
-  background: rgba(0, 0, 0, 0.65);
-  backdrop-filter: blur(6px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  background: rgba(8,45,69,.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   text-decoration: none;
-  transition: background-color 0.2s, transform 0.2s;
+  transition: transform .18s ease, background-color .18s ease;
 }
-.video-card__link:hover,
-.video-card__link:focus-visible {
-  transform: scale(1.08);
-}
-.video-card__link--tiktok:hover,
-.video-card__link--tiktok:focus-visible {
-  background: #000;
-}
-.video-card__link--youtube:hover,
-.video-card__link--youtube:focus-visible {
-  background: var(--color-youtube);
+.social__hint { margin-top: 7px; color: var(--color-slate-500); font-size: .67rem; font-weight: 700; text-align: center; }
+
+@media (min-width: 640px) {
+  .social__header {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    text-align: left;
+    margin-bottom: 36px;
+  }
+  .social .section-heading { margin-inline: 0; }
+  .social__followers { margin: 0; text-align: right; }
+  .social__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    overflow: visible;
+    padding: 0;
+  }
+  .video-card { width: 100%; max-width: none; }
+  .social__hint { display: none; }
 }
 
-.social__hint {
-  text-align: center;
-  font-size: var(--fs-text);
-  color: var(--color-slate-400);
-  margin-top: 12px;
+@media (min-width: 1024px) {
+  .social__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
 }
-@media (min-width: 640px) {
-  .social__hint {
-    display: none;
-  }
+
+@media (hover: hover) and (pointer: fine) {
+  .video-card:hover img { transform: scale(1.035); }
+  .video-card__link:hover,
+  .video-card__link:focus-visible { transform: scale(1.08); }
+  .video-card__link--tiktok:hover,
+  .video-card__link--tiktok:focus-visible { background: #111; }
+  .video-card__link--youtube:hover,
+  .video-card__link--youtube:focus-visible { background: var(--color-youtube); }
 }

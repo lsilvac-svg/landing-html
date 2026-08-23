@@ -20,20 +20,20 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A9%BA%3C/text%3E%3C/svg%3E" />
 
   <!-- CSS modular: variables/base primero, luego un archivo por sección -->
-  <link rel="stylesheet" href="css/variables.css" />
-  <link rel="stylesheet" href="css/base.css" />
-  <link rel="stylesheet" href="css/utilities.css" />
+  <link rel="stylesheet" href="css/variables.css?v=20260822-8" />
+  <link rel="stylesheet" href="css/base.css?v=20260822-8" />
+  <link rel="stylesheet" href="css/utilities.css?v=20260822-8" />
   <link rel="stylesheet" href="css/header.css" />
   <link rel="stylesheet" href="css/hero.css?v=20260822-5" />
-  <link rel="stylesheet" href="css/bento.css" />
-  <link rel="stylesheet" href="css/curriculum.css" />
-  <link rel="stylesheet" href="css/gallery.css" />
-  <link rel="stylesheet" href="css/social.css" />
-  <link rel="stylesheet" href="css/testimonials.css" />
-  <link rel="stylesheet" href="css/faq.css" />
-  <link rel="stylesheet" href="css/cta.css" />
-  <link rel="stylesheet" href="css/footer.css" />
-  <link rel="stylesheet" href="css/sticky-bar.css" />
+  <link rel="stylesheet" href="css/bento.css?v=20260822-8" />
+  <link rel="stylesheet" href="css/curriculum.css?v=20260822-9" />
+  <link rel="stylesheet" href="css/gallery.css?v=20260822-9" />
+  <link rel="stylesheet" href="css/social.css?v=20260822-9" />
+  <link rel="stylesheet" href="css/testimonials.css?v=20260822-9" />
+  <link rel="stylesheet" href="css/faq.css?v=20260822-8" />
+  <link rel="stylesheet" href="css/cta.css?v=20260822-8" />
+  <link rel="stylesheet" href="css/footer.css?v=20260822-8" />
+  <link rel="stylesheet" href="css/sticky-bar.css?v=20260822-8" />
 </head>
 <body>
 
@@ -222,10 +222,10 @@
   <section class="section bento" id="beneficios">
     <div class="container">
       <div class="eyebrow-title">
-        <p class="badge" style="background: rgba(0,119,182,0.08); border: 1px solid rgba(0,119,182,0.18); color: var(--color-blue-dark); margin-bottom: 14px;">🏥 INFRAESTRUCTURA Y EQUIPAMIENTO REAL</p>
+        <p class="badge section-badge">🏥 INFRAESTRUCTURA Y EQUIPAMIENTO REAL</p>
         <h2 class="section-heading">
           Todo lo que necesitas para formarte
-          <span style="color: var(--color-blue);">como un profesional de verdad</span>
+          <span class="section-accent">como un profesional de verdad</span>
         </h2>
       </div>
 
@@ -277,7 +277,7 @@
 
             <article class="bento-card bento-card--minor bento-card--certs">
               <div>
-                <svg class="bento-card__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-bottom: 6px;"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="14 3 14 9 20 9"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="13" y2="17"/></svg>
+                <svg class="bento-card__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="14 3 14 9 20 9"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="13" y2="17"/></svg>
                 <h3 class="bento-card__title">3 Certificaciones Modulares Acumulativas</h3>
               </div>
               <div>
@@ -296,139 +296,169 @@
   </section>
 
   <!-- ============================================================
-       MALLA CURRICULAR
+       MALLA CURRICULAR — 6 módulos según referencia
        ============================================================ -->
   <section class="section curriculum" id="carreras">
     <div class="container">
       <div class="curriculum__intro">
-        <h2 class="section-heading" style="color: var(--color-navy); margin-bottom: 12px;">
-          Tu camino como Enfermero Técnico:
-          <span style="color: var(--color-blue);">Aprende haciendo ciclo a ciclo</span>
+        <p class="badge section-badge">MALLA CURRICULAR · ENFERMERÍA</p>
+        <h2 class="section-heading">
+          Tu formación en <span class="section-accent">6 módulos progresivos</span>
         </h2>
-        <p>3 años · 6 módulos · 3 certificaciones intermedias</p>
+        <p>Una ruta de aprendizaje práctica que avanza desde promoción y prevención hasta atención integral en salud.</p>
       </div>
 
-      <div class="tab-strip" role="tablist" aria-label="Módulos de la carrera">
-        <button type="button" class="tab-strip__btn" role="tab" id="tab-modulo-1" aria-controls="panel-modulo-1" aria-selected="true" style="--module-color:#00AFAA;">
-          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-          <span class="hide-desktop">Año 1</span><span class="hide-mobile">Año 1 / Módulo 1</span>
+      <div class="tab-strip" role="tablist" aria-label="Módulos de la carrera de Enfermería Técnica">
+        <button type="button" class="tab-strip__btn" role="tab" id="tab-modulo-1" aria-controls="panel-modulo-1" aria-selected="true" tabindex="0" style="--module-color:#08AAA5;">
+          <span class="tab-strip__number">1</span><span>Módulo 1</span>
         </button>
-        <button type="button" class="tab-strip__btn" role="tab" id="tab-modulo-2" aria-controls="panel-modulo-2" aria-selected="false" style="--module-color:#0077B6; --module-text:#fff;">
-          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M12 8v8M8 12h8"/></svg>
-          <span class="hide-desktop">Año 2</span><span class="hide-mobile">Año 2 / Módulo 2</span>
+        <button type="button" class="tab-strip__btn" role="tab" id="tab-modulo-2" aria-controls="panel-modulo-2" aria-selected="false" tabindex="-1" style="--module-color:#0A8F95; --module-text:#fff;">
+          <span class="tab-strip__number">2</span><span>Módulo 2</span>
         </button>
-        <button type="button" class="tab-strip__btn" role="tab" id="tab-modulo-3" aria-controls="panel-modulo-3" aria-selected="false" style="--module-color:#C94A1D; --module-text:#fff;">
-          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.5 7 22l5-3 5 3-1.5-8.5"/></svg>
-          <span class="hide-desktop">Año 3</span><span class="hide-mobile">Año 3 / Módulo 3</span>
+        <button type="button" class="tab-strip__btn" role="tab" id="tab-modulo-3" aria-controls="panel-modulo-3" aria-selected="false" tabindex="-1" style="--module-color:#177B89; --module-text:#fff;">
+          <span class="tab-strip__number">3</span><span>Módulo 3</span>
+        </button>
+        <button type="button" class="tab-strip__btn" role="tab" id="tab-modulo-4" aria-controls="panel-modulo-4" aria-selected="false" tabindex="-1" style="--module-color:#1A6D82; --module-text:#fff;">
+          <span class="tab-strip__number">4</span><span>Módulo 4</span>
+        </button>
+        <button type="button" class="tab-strip__btn" role="tab" id="tab-modulo-5" aria-controls="panel-modulo-5" aria-selected="false" tabindex="-1" style="--module-color:#195B78; --module-text:#fff;">
+          <span class="tab-strip__number">5</span><span>Módulo 5</span>
+        </button>
+        <button type="button" class="tab-strip__btn" role="tab" id="tab-modulo-6" aria-controls="panel-modulo-6" aria-selected="false" tabindex="-1" style="--module-color:#FFC20B; --module-text:#082D45;">
+          <span class="tab-strip__number">6</span><span>Módulo 6</span>
         </button>
       </div>
 
-      <div class="module-panel" id="panel-modulo-1" role="tabpanel" aria-labelledby="tab-modulo-1" style="--module-color:#00AFAA;">
-        <div>
-          <div class="module-panel__eyebrow">
-            <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-            Año 1 / Módulo 1
-          </div>
-          <h3 class="module-panel__title">Atención Primaria y Salud Comunitaria</h3>
+      <div class="module-panel" id="panel-modulo-1" role="tabpanel" aria-labelledby="tab-modulo-1" style="--module-color:#08AAA5;">
+        <div class="module-panel__main">
+          <div class="module-panel__eyebrow">Módulo 1</div>
+          <h3 class="module-panel__title">Asistencia en la Promoción y Prevención de la Salud</h3>
           <ul class="module-panel__courses">
-            <li>Anatomía y Fisiología Humana</li>
-            <li>Inyectoterapia y Venopunción</li>
-            <li>Salud Comunitaria y Epidemiología</li>
-            <li>Enfermería Básica Integral</li>
-            <li>Primeros Auxilios Certificados</li>
+            <li>Anatomía y Fisiología</li>
+            <li>Bioseguridad</li>
+            <li>Comunicación Efectiva</li>
+            <li>Educación para la Salud</li>
+            <li>Primeros Auxilios</li>
+            <li>Química General</li>
+            <li>Metodología de Trabajo Científico</li>
           </ul>
-          <div class="module-panel__cert">
-            <svg class="module-panel__cert-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.5 7 22l5-3 5 3-1.5-8.5"/></svg>
-            <div>
-              <div class="module-panel__cert-label">Al completar obtienes</div>
-              <div class="module-panel__cert-value">Primer Certificado Modular</div>
-            </div>
-          </div>
         </div>
-        <div class="module-panel__media">
-          <img src="https://images.unsplash.com/photo-1579684453423-f84349ef60b0?w=640&h=480&fit=crop&auto=format&q=85" alt="Práctica curricular en el IESRP" loading="lazy" />
-          <div class="module-panel__media-overlay"></div>
-          <a class="download-syllabus" href="#" download>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            DESCARGAR TEMARIO EN PDF
-          </a>
-        </div>
-        <a class="download-syllabus hide-desktop" href="#" download>
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          DESCARGAR TEMARIO EN PDF
-        </a>
+        <aside class="module-panel__aside">
+          <div class="module-panel__hours"><strong>64 horas</strong><span>Experiencias Formativas en Situaciones Reales de Trabajo (EFSRT)</span></div>
+          <div class="module-panel__step">Inicio de la ruta formativa</div>
+        </aside>
       </div>
 
-      <div class="module-panel" id="panel-modulo-2" role="tabpanel" aria-labelledby="tab-modulo-2" style="--module-color:#0077B6;" hidden>
-        <div>
-          <div class="module-panel__eyebrow">
-            <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M12 8v8M8 12h8"/></svg>
-            Año 2 / Módulo 2
-          </div>
-          <h3 class="module-panel__title">Asistencia Hospitalaria y Quirúrgica</h3>
+      <div class="module-panel" id="panel-modulo-2" role="tabpanel" aria-labelledby="tab-modulo-2" style="--module-color:#0A8F95;" hidden>
+        <div class="module-panel__main">
+          <div class="module-panel__eyebrow">Módulo 2</div>
+          <h3 class="module-panel__title">Asistencia en la Promoción y Prevención de la Salud</h3>
           <ul class="module-panel__courses">
-            <li>Cuidados de Enfermería Hospitalaria</li>
-            <li>Técnicas Quirúrgicas Asistidas</li>
-            <li>Farmacología Clínica Aplicada</li>
-            <li>Cuidados Intermedios y UCI Básica</li>
-            <li>Nutrición Clínica y Dietética</li>
+            <li>Actividades en Salud Pública</li>
+            <li>Asistencia en la Administración de Medicamentos</li>
+            <li>Biología General</li>
+            <li>Epidemiología</li>
+            <li>Herramientas Informáticas</li>
+            <li>Liderazgo y Trabajo en Equipo</li>
+            <li>Semiología</li>
+            <li>Terminología</li>
           </ul>
+        </div>
+        <aside class="module-panel__aside">
+          <div class="module-panel__hours"><strong>64 horas</strong><span>Experiencias Formativas en Situaciones Reales de Trabajo (EFSRT)</span></div>
           <div class="module-panel__cert">
-            <svg class="module-panel__cert-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.5 7 22l5-3 5 3-1.5-8.5"/></svg>
-            <div>
-              <div class="module-panel__cert-label">Al completar obtienes</div>
-              <div class="module-panel__cert-value">Segundo Certificado Modular</div>
-            </div>
+            <svg class="module-panel__cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/><path d="M8 13h8M8 17h5"/></svg>
+            <div><span>Al completar obtienes</span><strong>Certificación Modular 1</strong></div>
           </div>
-        </div>
-        <div class="module-panel__media">
-          <img src="https://images.unsplash.com/photo-1579684453423-f84349ef60b0?w=640&h=480&fit=crop&auto=format&q=85" alt="Práctica curricular en el IESRP" loading="lazy" />
-          <div class="module-panel__media-overlay"></div>
-          <a class="download-syllabus" href="#" download>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            DESCARGAR TEMARIO EN PDF
-          </a>
-        </div>
-        <a class="download-syllabus hide-desktop" href="#" download>
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          DESCARGAR TEMARIO EN PDF
-        </a>
+        </aside>
       </div>
 
-      <div class="module-panel" id="panel-modulo-3" role="tabpanel" aria-labelledby="tab-modulo-3" style="--module-color:#C94A1D;" hidden>
-        <div>
-          <div class="module-panel__eyebrow">
-            <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.5 7 22l5-3 5 3-1.5-8.5"/></svg>
-            Año 3 / Módulo 3
-          </div>
-          <h3 class="module-panel__title">Cuidados Especializados y Gestión en Salud</h3>
+      <div class="module-panel" id="panel-modulo-3" role="tabpanel" aria-labelledby="tab-modulo-3" style="--module-color:#177B89;" hidden>
+        <div class="module-panel__main">
+          <div class="module-panel__eyebrow">Módulo 3</div>
+          <h3 class="module-panel__title">Asistencia en la Atención Básica en Salud</h3>
           <ul class="module-panel__courses">
-            <li>Cuidados UCI y Urgencias Avanzadas</li>
-            <li>Salud Mental y Enfermería Psiquiátrica</li>
-            <li>Gestión en Servicios de Salud Pública</li>
-            <li>Práctica Preprofesional Intensiva</li>
-            <li>Ética y Legislación en Salud</li>
+            <li>Administración en Salud Pública</li>
+            <li>Asistencia al Usuario con Patologías I</li>
+            <li>Asistencia Básica Hospitalaria I</li>
+            <li>Asistencia de Inmunizaciones</li>
+            <li>Medio Ambiente y Responsabilidad Social</li>
+            <li>Nutrición y Dietas I</li>
+            <li>Salud Comunitaria</li>
+            <li>Actividades de Complemento a la Formación Académica</li>
           </ul>
+        </div>
+        <aside class="module-panel__aside">
+          <div class="module-panel__step">Profundización en atención básica</div>
+        </aside>
+      </div>
+
+      <div class="module-panel" id="panel-modulo-4" role="tabpanel" aria-labelledby="tab-modulo-4" style="--module-color:#1A6D82;" hidden>
+        <div class="module-panel__main">
+          <div class="module-panel__eyebrow">Módulo 4</div>
+          <h3 class="module-panel__title">Asistencia en la Atención Básica en Salud</h3>
+          <ul class="module-panel__courses">
+            <li>Asistencia al Neonato</li>
+            <li>Asistencia al Usuario con Patologías II</li>
+            <li>Asistencia al Usuario Quirúrgico I</li>
+            <li>Asistencia Básica Hospitalaria II</li>
+            <li>Ética y Valores</li>
+            <li>Farmacología</li>
+            <li>Muestras Biológicas</li>
+            <li>Nutrición y Dietas II</li>
+            <li>Procedimientos Invasivos y No Invasivos</li>
+          </ul>
+        </div>
+        <aside class="module-panel__aside">
+          <div class="module-panel__hours"><strong>128 horas</strong><span>Experiencias Formativas en Situaciones Reales de Trabajo (EFSRT)</span></div>
           <div class="module-panel__cert">
-            <svg class="module-panel__cert-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.5 7 22l5-3 5 3-1.5-8.5"/></svg>
-            <div>
-              <div class="module-panel__cert-label">Al completar obtienes</div>
-              <div class="module-panel__cert-value">Título Profesional Técnico a Nombre de la Nación</div>
-            </div>
+            <svg class="module-panel__cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/><path d="M8 13h8M8 17h5"/></svg>
+            <div><span>Al completar obtienes</span><strong>Certificación Modular 2</strong></div>
           </div>
+        </aside>
+      </div>
+
+      <div class="module-panel" id="panel-modulo-5" role="tabpanel" aria-labelledby="tab-modulo-5" style="--module-color:#195B78;" hidden>
+        <div class="module-panel__main">
+          <div class="module-panel__eyebrow">Módulo 5</div>
+          <h3 class="module-panel__title">Asistencia en la Atención Integral en Salud</h3>
+          <ul class="module-panel__courses">
+            <li>Asistencia al Usuario Quirúrgico II</li>
+            <li>Asistencia Básica Hospitalaria III</li>
+            <li>Asistencia en Fisioterapia y Rehabilitación</li>
+            <li>Atención en Salud Materna</li>
+            <li>Emprendimiento</li>
+            <li>Gestión de Proyectos</li>
+            <li>Salud del Niño y del Adolescente</li>
+            <li>Actividades de Complemento a la Formación Académica</li>
+          </ul>
         </div>
-        <div class="module-panel__media">
-          <img src="https://images.unsplash.com/photo-1579684453423-f84349ef60b0?w=640&h=480&fit=crop&auto=format&q=85" alt="Práctica curricular en el IESRP" loading="lazy" />
-          <div class="module-panel__media-overlay"></div>
-          <a class="download-syllabus" href="#" download>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            DESCARGAR TEMARIO EN PDF
-          </a>
+        <aside class="module-panel__aside">
+          <div class="module-panel__step">Preparación para atención integral</div>
+        </aside>
+      </div>
+
+      <div class="module-panel" id="panel-modulo-6" role="tabpanel" aria-labelledby="tab-modulo-6" style="--module-color:#FFC20B;" hidden>
+        <div class="module-panel__main">
+          <div class="module-panel__eyebrow">Módulo 6</div>
+          <h3 class="module-panel__title">Asistencia en la Atención Integral en Salud</h3>
+          <ul class="module-panel__courses">
+            <li>Asistencia al Adulto Mayor</li>
+            <li>Asistencia en Medicina Alternativa</li>
+            <li>Asistencia en Salud Bucal</li>
+            <li>Asistencia en Salud Mental</li>
+            <li>Asistencia al Usuario Oncológico</li>
+            <li>Proyecto de Investigación</li>
+          </ul>
         </div>
-        <a class="download-syllabus hide-desktop" href="#" download>
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          DESCARGAR TEMARIO EN PDF
-        </a>
+        <aside class="module-panel__aside">
+          <div class="module-panel__hours"><strong>128 horas</strong><span>Experiencias Formativas en Situaciones Reales de Trabajo (EFSRT)</span></div>
+          <div class="module-panel__cert module-panel__cert--final">
+            <svg class="module-panel__cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/><path d="M8 13h8M8 17h5"/></svg>
+            <div><span>Al completar obtienes</span><strong>Certificación Modular 3</strong></div>
+          </div>
+          <div class="module-panel__degree"><strong>Bachiller Técnico</strong><span>Ruta hacia el Título Profesional Técnico a nombre de la Nación.</span></div>
+        </aside>
       </div>
     </div>
   </section>
@@ -440,8 +470,8 @@
     <div class="container">
       <div class="gallery__header">
         <div>
-          <p class="badge" style="background: rgba(0,175,170,0.08); border: 1px solid rgba(0,175,170,0.22); color: var(--color-cyan); margin-bottom: 12px;">📸 GALERÍA DE VIDA ESTUDIANTIL</p>
-          <h2 class="section-heading">Experiencia Enfermería <span style="color: var(--color-cyan);">en Vivo</span></h2>
+          <p class="badge section-badge">📸 GALERÍA DE VIDA ESTUDIANTIL</p>
+          <h2 class="section-heading">Experiencia Enfermería <span class="section-accent">en Vivo</span></h2>
         </div>
         <p>Haz clic para ampliar cualquier imagen.</p>
       </div>
@@ -532,7 +562,7 @@
       <div class="social__header">
         <div>
           <p class="badge social__badge"><span class="live-dot"></span> TRENDING EN REDES</p>
-          <h2 class="section-heading">Comunidad <span style="color: var(--color-tiktok);">TikTok</span> y <span style="color: var(--color-youtube);">YouTube</span></h2>
+          <h2 class="section-heading">Comunidad <span class="section-accent">TikTok y YouTube</span></h2>
         </div>
         <div class="social__followers">
           <strong>+1.2M</strong>
@@ -615,71 +645,66 @@
   </section>
 
   <!-- ============================================================
-       CONVENIOS Y TESTIMONIOS
+       ALIANZAS + REELS DE EGRESADOS
        ============================================================ -->
   <section class="section testimonials" id="nosotros">
     <div class="container">
       <div class="partners">
-        <p class="partners__label">Convenios Vigentes de Prácticas Preprofesionales</p>
-        <ul class="partners__list">
-          <li class="partners__item partners__item--highlight">
-            <div class="partners__name">🏥 Clínica Ricardo Palma</div>
-            <div class="partners__status">✓ Convenio Vigente 2024</div>
-          </li>
-          <li class="partners__item">
-            <div class="partners__name">🚑 Alerta Médica</div>
-            <div class="partners__status">✓ Convenio Vigente 2024</div>
-          </li>
-          <li class="partners__item">
-            <div class="partners__name">🏨 Hospital San José</div>
-            <div class="partners__status">✓ Convenio Vigente 2024</div>
-          </li>
-          <li class="partners__item">
-            <div class="partners__name">💊 Boticas Perú</div>
-            <div class="partners__status">✓ Convenio Vigente 2024</div>
-          </li>
-          <li class="partners__item">
-            <div class="partners__name">🌐 Red de Salud Lima</div>
-            <div class="partners__status">✓ Convenio Vigente 2024</div>
-          </li>
-        </ul>
-      </div>
-
-      <h2 class="testimonials__heading">Egresados que ya <span style="color: var(--color-blue);">están trabajando</span></h2>
-
-      <div class="testimonials__grid">
-        <article class="testimonial-card">
-          <div class="testimonial-card__header">
-            <div class="testimonial-card__avatar">
-              <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=80&h=80&fit=crop&auto=format&q=85" alt="Valeria Quispe Torres" loading="lazy" />
-              <span class="testimonial-card__verified" aria-hidden="true">✓</span>
+        <p class="badge section-badge">RED DE EXPERIENCIA PROFESIONAL</p>
+        <h2 class="partners__title">Nuestras <span class="section-accent">alianzas</span></h2>
+        <div class="partners-marquee" role="region" aria-label="Nuestras alianzas institucionales">
+          <div class="partners-marquee__track">
+            <div class="partners-marquee__group">
+              <div class="partner-logo" role="img" aria-label="Clínica Ricardo Palma" title="Clínica Ricardo Palma"><span>CRP</span></div>
+              <div class="partner-logo" role="img" aria-label="Alerta Médica" title="Alerta Médica"><span>AM</span></div>
+              <div class="partner-logo" role="img" aria-label="Hospital San José" title="Hospital San José"><span>HSJ</span></div>
+              <div class="partner-logo" role="img" aria-label="Boticas Perú" title="Boticas Perú"><span>BP</span></div>
+              <div class="partner-logo" role="img" aria-label="Red de Salud Lima" title="Red de Salud Lima"><span>RSL</span></div>
             </div>
-            <div>
-              <div class="testimonial-card__name">Valeria Quispe Torres</div>
-              <div class="testimonial-card__role">Técnica en Enfermería — Clínica Ricardo Palma</div>
-              <div class="testimonial-card__cohort">Egresada 2023 · Sede San Isidro</div>
+            <div class="partners-marquee__group" aria-hidden="true">
+              <div class="partner-logo"><span>CRP</span></div>
+              <div class="partner-logo"><span>AM</span></div>
+              <div class="partner-logo"><span>HSJ</span></div>
+              <div class="partner-logo"><span>BP</span></div>
+              <div class="partner-logo"><span>RSL</span></div>
             </div>
           </div>
-          <div class="testimonial-card__stars" aria-hidden="true">★★★★★</div>
-          <p class="testimonial-card__quote">"Gracias a las prácticas desde el primer año, ya tenía experiencia real cuando terminé la carrera. A los 2 meses de graduarme estaba trabajando en la Clínica Ricardo Palma."</p>
-        </article>
-
-        <article class="testimonial-card">
-          <div class="testimonial-card__header">
-            <div class="testimonial-card__avatar">
-              <img src="https://images.unsplash.com/photo-1621862912856-0909fb7f14b7?w=80&h=80&fit=crop&auto=format&q=85" alt="Carlos Mendoza Flores" loading="lazy" />
-              <span class="testimonial-card__verified" aria-hidden="true">✓</span>
-            </div>
-            <div>
-              <div class="testimonial-card__name">Carlos Mendoza Flores</div>
-              <div class="testimonial-card__role">Técnico en Enfermería — Hospital San José</div>
-              <div class="testimonial-card__cohort">Egresado 2022 · Sede Ate</div>
-            </div>
-          </div>
-          <div class="testimonial-card__stars" aria-hidden="true">★★★★★</div>
-          <p class="testimonial-card__quote">"Los laboratorios del IESRP son de nivel hospitalario real. Aprendí venopunción y procedimientos clínicos en condiciones reales. Hoy trabajo en UCI pediátrica completamente preparado."</p>
-        </article>
+        </div>
       </div>
+
+      <div class="reels__header">
+        <p class="badge section-badge"><span class="live-dot"></span> HISTORIAS EN VIDEO</p>
+        <h2 class="testimonials__heading">Egresados que cuentan su <span class="section-accent">experiencia</span></h2>
+        <p>Formato vertical tipo Reel para mostrar testimonios reales, prácticas y experiencias de empleabilidad.</p>
+      </div>
+
+      <div class="reels__track" aria-label="Reels de egresados">
+        <a class="reel-card" href="https://www.tiktok.com/@iesrp" target="_blank" rel="noopener noreferrer" aria-label="Ver reel: Mi experiencia en prácticas clínicas">
+          <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=520&h=820&fit=crop&auto=format&q=85" alt="Egresada de Enfermería compartiendo su experiencia" loading="lazy" />
+          <span class="reel-card__play" aria-hidden="true">▶</span>
+          <span class="reel-card__badge">REEL</span>
+          <div class="reel-card__overlay"><strong>Mi experiencia en prácticas clínicas</strong><span>Historias IESRP</span></div>
+        </a>
+        <a class="reel-card" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Ver reel: Así fue mi primer día de prácticas">
+          <img src="https://images.unsplash.com/photo-1579684453423-f84349ef60b0?w=520&h=820&fit=crop&auto=format&q=85" alt="Estudiante de Enfermería durante prácticas" loading="lazy" />
+          <span class="reel-card__play" aria-hidden="true">▶</span>
+          <span class="reel-card__badge">REEL</span>
+          <div class="reel-card__overlay"><strong>Así fue mi primer día de prácticas</strong><span>Vida estudiantil</span></div>
+        </a>
+        <a class="reel-card" href="https://www.tiktok.com/@iesrp" target="_blank" rel="noopener noreferrer" aria-label="Ver reel: De estudiante a profesional técnico">
+          <img src="https://images.unsplash.com/photo-1621862912856-0909fb7f14b7?w=520&h=820&fit=crop&auto=format&q=85" alt="Profesional técnico de salud" loading="lazy" />
+          <span class="reel-card__play" aria-hidden="true">▶</span>
+          <span class="reel-card__badge">REEL</span>
+          <div class="reel-card__overlay"><strong>De estudiante a profesional técnico</strong><span>Egresados IESRP</span></div>
+        </a>
+        <a class="reel-card" href="https://www.youtube.com/@iesrp" target="_blank" rel="noopener noreferrer" aria-label="Ver reel: Lo que aprendí en laboratorio">
+          <img src="https://images.unsplash.com/photo-1783519890730-3436fd0bf965?w=520&h=820&fit=crop&auto=format&q=85" alt="Práctica en laboratorio de salud" loading="lazy" />
+          <span class="reel-card__play" aria-hidden="true">▶</span>
+          <span class="reel-card__badge">REEL</span>
+          <div class="reel-card__overlay"><strong>Lo que aprendí en laboratorio</strong><span>Aprender haciendo</span></div>
+        </a>
+      </div>
+      <p class="reels__hint">← Desliza para ver más reels →</p>
     </div>
   </section>
 
@@ -847,7 +872,7 @@ San Isidro, Lima</div>
 
   <script src="js/utils.js"></script>
   <script src="js/heroForm.js"></script>
-  <script src="js/curriculumTabs.js"></script>
+  <script src="js/curriculumTabs.js?v=20260822-9"></script>
   <script src="js/gallery.js"></script>
   <script src="js/faqAccordion.js"></script>
   <script src="js/stickyBar.js"></script>
