@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="css/header.css" />
   <link rel="stylesheet" href="css/hero.css?v=20260822-5" />
   <link rel="stylesheet" href="css/bento.css?v=20260822-8" />
-  <link rel="stylesheet" href="css/curriculum.css?v=20260822-9" />
+  <link rel="stylesheet" href="css/curriculum.css?v=20260826-1" />
   <link rel="stylesheet" href="css/gallery.css?v=20260822-9" />
   <link rel="stylesheet" href="css/social.css?v=20260822-9" />
   <link rel="stylesheet" href="css/testimonials.css?v=20260822-9" />
@@ -288,166 +288,177 @@
   </section>
 
   <!-- ============================================================
-       MALLA CURRICULAR — 6 módulos según referencia
+       MALLA CURRICULAR — 3 módulos / 6 ciclos
        ============================================================ -->
   <section class="section curriculum" id="carreras">
     <div class="container">
       <div class="curriculum__intro">
         <p class="badge section-badge">MALLA CURRICULAR · ENFERMERÍA</p>
         <h2 class="section-heading">
-          Tu formación en <span class="section-accent">6 módulos progresivos</span>
+          Tu formación en <span class="section-accent">3 módulos · 6 ciclos</span>
         </h2>
-        <p>Una ruta de aprendizaje práctica que avanza desde promoción y prevención hasta atención integral en salud.</p>
+        <p>Cada módulo integra 2 ciclos consecutivos, en una ruta práctica que avanza desde promoción y prevención hasta atención integral en salud.</p>
       </div>
 
       <div class="tab-strip" role="tablist" aria-label="Módulos de la carrera de Enfermería Técnica">
         <button type="button" class="tab-strip__btn" role="tab" id="tab-modulo-1" aria-controls="panel-modulo-1" aria-selected="true" tabindex="0" style="--module-color:#08AAA5;">
-          <span class="tab-strip__number">1</span><span>Módulo 1</span>
+          <span class="tab-strip__number">1</span><span>Módulo 1</span><small>Ciclos I · II</small>
         </button>
-        <button type="button" class="tab-strip__btn" role="tab" id="tab-modulo-2" aria-controls="panel-modulo-2" aria-selected="false" tabindex="-1" style="--module-color:#0A8F95; --module-text:#fff;">
-          <span class="tab-strip__number">2</span><span>Módulo 2</span>
+        <button type="button" class="tab-strip__btn" role="tab" id="tab-modulo-2" aria-controls="panel-modulo-2" aria-selected="false" tabindex="-1" style="--module-color:#177B89; --module-text:#fff;">
+          <span class="tab-strip__number">2</span><span>Módulo 2</span><small>Ciclos III · IV</small>
         </button>
-        <button type="button" class="tab-strip__btn" role="tab" id="tab-modulo-3" aria-controls="panel-modulo-3" aria-selected="false" tabindex="-1" style="--module-color:#177B89; --module-text:#fff;">
-          <span class="tab-strip__number">3</span><span>Módulo 3</span>
-        </button>
-        <button type="button" class="tab-strip__btn" role="tab" id="tab-modulo-4" aria-controls="panel-modulo-4" aria-selected="false" tabindex="-1" style="--module-color:#1A6D82; --module-text:#fff;">
-          <span class="tab-strip__number">4</span><span>Módulo 4</span>
-        </button>
-        <button type="button" class="tab-strip__btn" role="tab" id="tab-modulo-5" aria-controls="panel-modulo-5" aria-selected="false" tabindex="-1" style="--module-color:#195B78; --module-text:#fff;">
-          <span class="tab-strip__number">5</span><span>Módulo 5</span>
-        </button>
-        <button type="button" class="tab-strip__btn" role="tab" id="tab-modulo-6" aria-controls="panel-modulo-6" aria-selected="false" tabindex="-1" style="--module-color:#FFC20B; --module-text:#082D45;">
-          <span class="tab-strip__number">6</span><span>Módulo 6</span>
+        <button type="button" class="tab-strip__btn" role="tab" id="tab-modulo-3" aria-controls="panel-modulo-3" aria-selected="false" tabindex="-1" style="--module-color:#FFC20B; --module-text:#082D45;">
+          <span class="tab-strip__number">3</span><span>Módulo 3</span><small>Ciclos V · VI</small>
         </button>
       </div>
 
       <div class="module-panel" id="panel-modulo-1" role="tabpanel" aria-labelledby="tab-modulo-1" style="--module-color:#08AAA5;">
         <div class="module-panel__main">
-          <div class="module-panel__eyebrow">Módulo 1</div>
+          <div class="module-panel__eyebrow">Módulo 1 · Ciclos I y II</div>
           <h3 class="module-panel__title">Asistencia en la Promoción y Prevención de la Salud</h3>
-          <ul class="module-panel__courses">
-            <li>Anatomía y Fisiología</li>
-            <li>Bioseguridad</li>
-            <li>Comunicación Efectiva</li>
-            <li>Educación para la Salud</li>
-            <li>Primeros Auxilios</li>
-            <li>Química General</li>
-            <li>Metodología de Trabajo Científico</li>
-          </ul>
-        </div>
-        <aside class="module-panel__aside">
-          <div class="module-panel__hours"><strong>64 horas</strong><span>Experiencias Formativas en Situaciones Reales de Trabajo (EFSRT)</span></div>
-          <div class="module-panel__step">Inicio de la ruta formativa</div>
-        </aside>
-      </div>
+          <div class="module-panel__cycles">
+            <article class="module-cycle">
+              <div class="module-cycle__header">
+                <span class="module-cycle__number">I</span>
+                <div><span class="module-cycle__label">Ciclo I</span><small>7 asignaturas</small></div>
+              </div>
+              <ul class="module-panel__courses">
+                <li>Anatomía y Fisiología</li>
+                <li>Bioseguridad</li>
+                <li>Comunicación Efectiva</li>
+                <li>Educación para la Salud</li>
+                <li>Primeros Auxilios</li>
+                <li>Química General</li>
+                <li>Metodología de Trabajo Científico</li>
+              </ul>
+              <div class="module-cycle__meta"><strong>64 horas</strong><span>EFSRT</span></div>
+            </article>
 
-      <div class="module-panel" id="panel-modulo-2" role="tabpanel" aria-labelledby="tab-modulo-2" style="--module-color:#0A8F95;" hidden>
-        <div class="module-panel__main">
-          <div class="module-panel__eyebrow">Módulo 2</div>
-          <h3 class="module-panel__title">Asistencia en la Promoción y Prevención de la Salud</h3>
-          <ul class="module-panel__courses">
-            <li>Actividades en Salud Pública</li>
-            <li>Asistencia en la Administración de Medicamentos</li>
-            <li>Biología General</li>
-            <li>Epidemiología</li>
-            <li>Herramientas Informáticas</li>
-            <li>Liderazgo y Trabajo en Equipo</li>
-            <li>Semiología</li>
-            <li>Terminología</li>
-          </ul>
+            <article class="module-cycle">
+              <div class="module-cycle__header">
+                <span class="module-cycle__number">II</span>
+                <div><span class="module-cycle__label">Ciclo II</span><small>8 asignaturas</small></div>
+              </div>
+              <ul class="module-panel__courses">
+                <li>Actividades en Salud Pública</li>
+                <li>Asistencia en la Administración de Medicamentos</li>
+                <li>Biología General</li>
+                <li>Epidemiología</li>
+                <li>Herramientas Informáticas</li>
+                <li>Liderazgo y Trabajo en Equipo</li>
+                <li>Semiología</li>
+                <li>Terminología</li>
+              </ul>
+              <div class="module-cycle__meta"><strong>64 horas</strong><span>EFSRT</span></div>
+            </article>
+          </div>
         </div>
         <aside class="module-panel__aside">
-          <div class="module-panel__hours"><strong>64 horas</strong><span>Experiencias Formativas en Situaciones Reales de Trabajo (EFSRT)</span></div>
+          <div class="module-panel__hours"><strong>2 ciclos</strong><span>Ciclos I y II agrupados dentro de este módulo.</span></div>
           <div class="module-panel__cert">
             <svg class="module-panel__cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/><path d="M8 13h8M8 17h5"/></svg>
-            <div><span>Al completar obtienes</span><strong>Certificación Modular 1</strong></div>
+            <div><span>Al completar ambos ciclos</span><strong>Certificación Modular 1</strong></div>
           </div>
+          <div class="module-panel__step">Promoción y prevención de la salud</div>
         </aside>
       </div>
 
-      <div class="module-panel" id="panel-modulo-3" role="tabpanel" aria-labelledby="tab-modulo-3" style="--module-color:#177B89;" hidden>
+      <div class="module-panel" id="panel-modulo-2" role="tabpanel" aria-labelledby="tab-modulo-2" style="--module-color:#177B89;" hidden>
         <div class="module-panel__main">
-          <div class="module-panel__eyebrow">Módulo 3</div>
+          <div class="module-panel__eyebrow">Módulo 2 · Ciclos III y IV</div>
           <h3 class="module-panel__title">Asistencia en la Atención Básica en Salud</h3>
-          <ul class="module-panel__courses">
-            <li>Administración en Salud Pública</li>
-            <li>Asistencia al Usuario con Patologías I</li>
-            <li>Asistencia Básica Hospitalaria I</li>
-            <li>Asistencia de Inmunizaciones</li>
-            <li>Medio Ambiente y Responsabilidad Social</li>
-            <li>Nutrición y Dietas I</li>
-            <li>Salud Comunitaria</li>
-            <li>Actividades de Complemento a la Formación Académica</li>
-          </ul>
+          <div class="module-panel__cycles">
+            <article class="module-cycle">
+              <div class="module-cycle__header">
+                <span class="module-cycle__number">III</span>
+                <div><span class="module-cycle__label">Ciclo III</span><small>8 asignaturas</small></div>
+              </div>
+              <ul class="module-panel__courses">
+                <li>Administración en Salud Pública</li>
+                <li>Asistencia al Usuario con Patologías I</li>
+                <li>Asistencia Básica Hospitalaria I</li>
+                <li>Asistencia de Inmunizaciones</li>
+                <li>Medio Ambiente y Responsabilidad Social</li>
+                <li>Nutrición y Dietas I</li>
+                <li>Salud Comunitaria</li>
+                <li>Actividades de Complemento a la Formación Académica</li>
+              </ul>
+            </article>
+
+            <article class="module-cycle">
+              <div class="module-cycle__header">
+                <span class="module-cycle__number">IV</span>
+                <div><span class="module-cycle__label">Ciclo IV</span><small>9 asignaturas</small></div>
+              </div>
+              <ul class="module-panel__courses">
+                <li>Asistencia al Neonato</li>
+                <li>Asistencia al Usuario con Patologías II</li>
+                <li>Asistencia al Usuario Quirúrgico I</li>
+                <li>Asistencia Básica Hospitalaria II</li>
+                <li>Ética y Valores</li>
+                <li>Farmacología</li>
+                <li>Muestras Biológicas</li>
+                <li>Nutrición y Dietas II</li>
+                <li>Procedimientos Invasivos y No Invasivos</li>
+              </ul>
+              <div class="module-cycle__meta"><strong>128 horas</strong><span>EFSRT</span></div>
+            </article>
+          </div>
         </div>
         <aside class="module-panel__aside">
+          <div class="module-panel__hours"><strong>2 ciclos</strong><span>Ciclos III y IV agrupados dentro de este módulo.</span></div>
+          <div class="module-panel__cert">
+            <svg class="module-panel__cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/><path d="M8 13h8M8 17h5"/></svg>
+            <div><span>Al completar ambos ciclos</span><strong>Certificación Modular 2</strong></div>
+          </div>
           <div class="module-panel__step">Profundización en atención básica</div>
         </aside>
       </div>
 
-      <div class="module-panel" id="panel-modulo-4" role="tabpanel" aria-labelledby="tab-modulo-4" style="--module-color:#1A6D82;" hidden>
+      <div class="module-panel" id="panel-modulo-3" role="tabpanel" aria-labelledby="tab-modulo-3" style="--module-color:#FFC20B;" hidden>
         <div class="module-panel__main">
-          <div class="module-panel__eyebrow">Módulo 4</div>
-          <h3 class="module-panel__title">Asistencia en la Atención Básica en Salud</h3>
-          <ul class="module-panel__courses">
-            <li>Asistencia al Neonato</li>
-            <li>Asistencia al Usuario con Patologías II</li>
-            <li>Asistencia al Usuario Quirúrgico I</li>
-            <li>Asistencia Básica Hospitalaria II</li>
-            <li>Ética y Valores</li>
-            <li>Farmacología</li>
-            <li>Muestras Biológicas</li>
-            <li>Nutrición y Dietas II</li>
-            <li>Procedimientos Invasivos y No Invasivos</li>
-          </ul>
-        </div>
-        <aside class="module-panel__aside">
-          <div class="module-panel__hours"><strong>128 horas</strong><span>Experiencias Formativas en Situaciones Reales de Trabajo (EFSRT)</span></div>
-          <div class="module-panel__cert">
-            <svg class="module-panel__cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/><path d="M8 13h8M8 17h5"/></svg>
-            <div><span>Al completar obtienes</span><strong>Certificación Modular 2</strong></div>
+          <div class="module-panel__eyebrow">Módulo 3 · Ciclos V y VI</div>
+          <h3 class="module-panel__title">Asistencia en la Atención Integral en Salud</h3>
+          <div class="module-panel__cycles">
+            <article class="module-cycle">
+              <div class="module-cycle__header">
+                <span class="module-cycle__number">V</span>
+                <div><span class="module-cycle__label">Ciclo V</span><small>8 asignaturas</small></div>
+              </div>
+              <ul class="module-panel__courses">
+                <li>Asistencia al Usuario Quirúrgico II</li>
+                <li>Asistencia Básica Hospitalaria III</li>
+                <li>Asistencia en Fisioterapia y Rehabilitación</li>
+                <li>Atención en Salud Materna</li>
+                <li>Emprendimiento</li>
+                <li>Gestión de Proyectos</li>
+                <li>Salud del Niño y del Adolescente</li>
+                <li>Actividades de Complemento a la Formación Académica</li>
+              </ul>
+            </article>
+
+            <article class="module-cycle">
+              <div class="module-cycle__header">
+                <span class="module-cycle__number">VI</span>
+                <div><span class="module-cycle__label">Ciclo VI</span><small>6 asignaturas</small></div>
+              </div>
+              <ul class="module-panel__courses">
+                <li>Asistencia al Adulto Mayor</li>
+                <li>Asistencia en Medicina Alternativa</li>
+                <li>Asistencia en Salud Bucal</li>
+                <li>Asistencia en Salud Mental</li>
+                <li>Asistencia al Usuario Oncológico</li>
+                <li>Proyecto de Investigación</li>
+              </ul>
+              <div class="module-cycle__meta"><strong>128 horas</strong><span>EFSRT</span></div>
+            </article>
           </div>
-        </aside>
-      </div>
-
-      <div class="module-panel" id="panel-modulo-5" role="tabpanel" aria-labelledby="tab-modulo-5" style="--module-color:#195B78;" hidden>
-        <div class="module-panel__main">
-          <div class="module-panel__eyebrow">Módulo 5</div>
-          <h3 class="module-panel__title">Asistencia en la Atención Integral en Salud</h3>
-          <ul class="module-panel__courses">
-            <li>Asistencia al Usuario Quirúrgico II</li>
-            <li>Asistencia Básica Hospitalaria III</li>
-            <li>Asistencia en Fisioterapia y Rehabilitación</li>
-            <li>Atención en Salud Materna</li>
-            <li>Emprendimiento</li>
-            <li>Gestión de Proyectos</li>
-            <li>Salud del Niño y del Adolescente</li>
-            <li>Actividades de Complemento a la Formación Académica</li>
-          </ul>
         </div>
         <aside class="module-panel__aside">
-          <div class="module-panel__step">Preparación para atención integral</div>
-        </aside>
-      </div>
-
-      <div class="module-panel" id="panel-modulo-6" role="tabpanel" aria-labelledby="tab-modulo-6" style="--module-color:#FFC20B;" hidden>
-        <div class="module-panel__main">
-          <div class="module-panel__eyebrow">Módulo 6</div>
-          <h3 class="module-panel__title">Asistencia en la Atención Integral en Salud</h3>
-          <ul class="module-panel__courses">
-            <li>Asistencia al Adulto Mayor</li>
-            <li>Asistencia en Medicina Alternativa</li>
-            <li>Asistencia en Salud Bucal</li>
-            <li>Asistencia en Salud Mental</li>
-            <li>Asistencia al Usuario Oncológico</li>
-            <li>Proyecto de Investigación</li>
-          </ul>
-        </div>
-        <aside class="module-panel__aside">
-          <div class="module-panel__hours"><strong>128 horas</strong><span>Experiencias Formativas en Situaciones Reales de Trabajo (EFSRT)</span></div>
+          <div class="module-panel__hours"><strong>2 ciclos</strong><span>Ciclos V y VI agrupados dentro de este módulo.</span></div>
           <div class="module-panel__cert module-panel__cert--final">
             <svg class="module-panel__cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/><path d="M8 13h8M8 17h5"/></svg>
-            <div><span>Al completar obtienes</span><strong>Certificación Modular 3</strong></div>
+            <div><span>Al completar ambos ciclos</span><strong>Certificación Modular 3</strong></div>
           </div>
           <div class="module-panel__degree"><strong>Bachiller Técnico</strong><span>Ruta hacia el Título Profesional Técnico a nombre de la Nación.</span></div>
         </aside>

@@ -1,6 +1,6 @@
 /* ============================================================
-   Malla curricular — 6 módulos, Mobile First
-   Basada en la malla curricular proporcionada por el usuario.
+   Malla curricular — 3 módulos / 6 ciclos, Mobile First
+   Cada módulo agrupa dos ciclos consecutivos.
    ============================================================ */
 .curriculum {
   color: var(--color-navy);
@@ -24,7 +24,7 @@
 }
 
 .curriculum__intro > p:last-child {
-  max-width: 640px;
+  max-width: 680px;
   margin-inline: auto;
   color: var(--color-slate-500);
   font-size: .84rem;
@@ -45,8 +45,8 @@
 
 .tab-strip__btn {
   min-width: 0;
-  min-height: 52px;
-  padding: 7px 5px;
+  min-height: 60px;
+  padding: 8px 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,11 +57,21 @@
   color: var(--color-slate-500);
   background: transparent;
   font-family: var(--font-heading);
-  font-size: .61rem;
+  font-size: .64rem;
   font-weight: 800;
   line-height: 1.1;
   text-align: center;
   transition: background-color .18s ease, color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+
+.tab-strip__btn small {
+  display: block;
+  margin-top: 2px;
+  font-family: var(--font-body);
+  font-size: .56rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+  opacity: .78;
 }
 
 .tab-strip__number {
@@ -109,13 +119,72 @@
 }
 
 .module-panel__title {
-  max-width: 650px;
+  max-width: 720px;
   margin-bottom: 16px;
   color: var(--color-navy);
   font-size: clamp(1.16rem, 1.04rem + .55vw, 1.55rem);
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: -.035em;
+}
+
+.module-panel__cycles {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 14px;
+}
+
+.module-cycle {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+  border: 1px solid color-mix(in srgb, var(--module-color) 17%, var(--color-slate-200));
+  border-radius: 14px;
+  background: rgba(255,255,255,.82);
+}
+
+.module-cycle__header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  padding-bottom: 11px;
+  border-bottom: 1px solid color-mix(in srgb, var(--module-color) 15%, var(--color-slate-200));
+}
+
+.module-cycle__number {
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  color: color-mix(in srgb, var(--module-color) 78%, var(--color-navy));
+  background: color-mix(in srgb, var(--module-color) 12%, #fff);
+  font-family: var(--font-heading);
+  font-size: .82rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.module-cycle__label,
+.module-cycle__header small {
+  display: block;
+}
+
+.module-cycle__label {
+  margin-bottom: 2px;
+  color: var(--color-navy);
+  font-family: var(--font-heading);
+  font-size: .86rem;
+  font-weight: 800;
+}
+
+.module-cycle__header small {
+  color: var(--color-slate-500);
+  font-size: .61rem;
+  font-weight: 700;
 }
 
 .module-panel__courses {
@@ -152,6 +221,20 @@
   background: var(--module-color);
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--module-color) 12%, transparent);
 }
+
+.module-cycle__meta {
+  width: fit-content;
+  margin-top: 10px;
+  padding: 6px 9px;
+  border-radius: 999px;
+  color: color-mix(in srgb, var(--module-color) 70%, var(--color-navy));
+  background: color-mix(in srgb, var(--module-color) 8%, #fff);
+  font-size: .62rem;
+  line-height: 1;
+}
+
+.module-cycle__meta strong { font-weight: 900; }
+.module-cycle__meta span { margin-left: 4px; font-weight: 800; }
 
 .module-panel__aside {
   display: grid;
@@ -261,37 +344,39 @@
 }
 
 @media (min-width: 520px) {
-  .module-panel__courses { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .module-cycle .module-panel__courses { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (min-width: 640px) {
   .curriculum__intro { margin-bottom: 36px; }
 
   .tab-strip {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-    max-width: 940px;
+    max-width: 720px;
     margin: 0 auto 28px;
-    gap: 6px;
+    gap: 8px;
   }
 
   .tab-strip__btn {
-    min-height: 60px;
-    font-size: .68rem;
+    min-height: 68px;
+    font-size: .72rem;
   }
 
+  .tab-strip__btn small { font-size: .6rem; }
   .tab-strip__number { font-size: 1.15rem; }
 
   .module-panel { padding: 24px; }
+  .module-cycle { padding: 16px; }
 }
 
 @media (min-width: 900px) {
   .module-panel {
-    grid-template-columns: minmax(0, 1.7fr) minmax(260px, .72fr);
+    grid-template-columns: minmax(0, 2.15fr) minmax(250px, .72fr);
     gap: 28px;
     padding: 30px;
   }
 
-  .module-panel__courses { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .module-panel__cycles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .module-cycle .module-panel__courses { grid-template-columns: minmax(0, 1fr); }
 
   .module-panel__aside {
     padding-left: 26px;
