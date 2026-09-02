@@ -128,10 +128,10 @@
             <img src="https://images.unsplash.com/photo-1706958580557-ddc88a349a16?w=48&h=48&fit=crop&auto=format&q=85" alt="" loading="lazy" />
           </div>
           <div class="hero__proof-copy">
-            <div class="hero__rating">
+            <!-- <div class="hero__rating">
               <span class="hero__rating-stars" aria-label="5 estrellas">★★★★★</span>
               <span class="hero__rating-score">4.9/5</span>
-            </div>
+            </div> -->
             <div class="hero__rating-count">+1,200 egresados laborando actualmente</div>
           </div>
         </div>
@@ -157,20 +157,6 @@
         </div>
 
         <form class="hero__form-body" id="hero-form" novalidate>
-          <div class="sede-toggle">
-            <span class="form-label" id="sede-toggle-label">Selecciona tu sede</span>
-            <div class="sede-toggle__group" role="group" aria-labelledby="sede-toggle-label">
-              <button type="button" class="sede-toggle__btn" data-sede="ate" aria-pressed="true">
-                <svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                Sede Ate
-              </button>
-              <button type="button" class="sede-toggle__btn" data-sede="sanisidro" aria-pressed="false">
-                <svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                San Isidro
-              </button>
-            </div>
-          </div>
-
           <div class="form-fields">
             <div class="form-field">
               <label class="form-label" for="hero-name">Nombres completos</label>
@@ -193,6 +179,21 @@
               <option value="manana">Mañana (7am – 1pm)</option>
               <option value="tarde">Tarde (1pm – 7pm)</option>
               <option value="noche">Noche (7pm – 11pm)</option>
+            </select>
+          </div>
+
+          <div class="form-turno">
+            <label class="form-label" for="hero-enteraste">¿Cómo te enteraste?</label>
+            <select class="form-select" id="hero-enteraste" name="enteraste">
+              <option value="">Selecciona una opción</option>
+              <option value="facebook">Facebook</option>
+              <option value="instagram">Instagram</option>
+              <option value="tiktok">TikTok</option>
+              <option value="linkedin">LinkedIn</option>
+              <option value="google">Google</option>
+              <option value="radio">Radio</option>
+              <option value="familiares">Familiares/Conocidos</option>
+              <option value="volanteo">Volanteo</option>
             </select>
           </div>
 
