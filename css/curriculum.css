@@ -243,6 +243,7 @@
 }
 
 .module-panel__hours,
+.module-panel__note,
 .module-panel__step,
 .module-panel__degree,
 .module-panel__cert {
@@ -272,6 +273,30 @@
 .module-panel__hours span {
   color: var(--color-slate-600);
   font-size: .7rem;
+  line-height: 1.45;
+}
+
+.module-panel__note {
+  border: 1px solid rgba(8,45,69,.1);
+  background: var(--color-slate-50);
+}
+
+.module-panel__note strong,
+.module-panel__note span {
+  display: block;
+}
+
+.module-panel__note strong {
+  margin-bottom: 4px;
+  color: var(--color-navy);
+  font-family: var(--font-heading);
+  font-size: .74rem;
+  font-weight: 800;
+}
+
+.module-panel__note span {
+  color: var(--color-slate-600);
+  font-size: .68rem;
   line-height: 1.45;
 }
 

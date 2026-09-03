@@ -59,6 +59,24 @@
   letter-spacing: -0.6px;
 }
 
+/* Tope de 3 líneas para títulos principales: evita que copys largos
+   rompan la composición mientras se define el texto final, y reparte
+   las líneas de forma pareja en vez de dejar una suelta muy corta. */
+.section-heading,
+.hero__title,
+.bento-card__title,
+.module-panel__title,
+.testimonials__heading,
+.partners__title,
+.faq-section__intro h2,
+.cta-block__intro h2 {
+  text-wrap: balance;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
 .live-dot {
   display: inline-block;
   width: 7px;
@@ -111,9 +129,9 @@
 }
 
 .btn-orange {
-  /* Texto blanco (como en el diseño original) — el naranja ahora es
-     un terracota profundo elegido para que el blanco tenga ≥4.5:1. */
-  color: var(--color-white);
+  /* Texto azul marino: el fondo es amarillo/dorado, y el blanco no
+     alcanza contraste suficiente sobre ese tono. */
+  color: var(--color-navy);
   background: linear-gradient(135deg, var(--color-orange), var(--color-orange-grad));
   background-color: var(--color-orange);
   box-shadow: var(--shadow-cta);
