@@ -63,6 +63,10 @@
   letter-spacing: -.045em;
 }
 
+.hero__title-line {
+  display: block;
+}
+
 .hero__title-accent {
   color: #079e99;
 }
@@ -384,6 +388,8 @@
   }
 
   .hero__title {
+    grid-column: 1 / -1;
+    max-width: none;
     font-size: clamp(2.35rem, 5.5vw, 3.1rem);
   }
 
@@ -405,7 +411,7 @@
 /* Desktop: 3 columnas reales como la referencia */
 @media (min-width: 960px) {
   .hero {
-    min-height: 635px;
+    min-height: 0;
     scroll-margin-top: 104px;
   }
 
@@ -424,7 +430,7 @@
   }
 
   .hero__content {
-    min-height: 635px;
+    min-height: 0;
     padding: 20px 28px 0;
     grid-template-columns: minmax(310px, 1.02fr) minmax(300px, 1.04fr) minmax(320px, .94fr);
     gap: 0;
@@ -441,9 +447,16 @@
   }
 
   .hero__title {
-    max-width: 16ch;
-    font-size: clamp(2.18rem, 3.4vw, 2.65rem);
+    position: relative;
+    z-index: 1;
+    width: 46rem;
+    max-width: none;
+    font-size: clamp(2.18rem, 3.4vw, 2.85rem);
     line-height: 1.11;
+  }
+
+  .hero__title-line {
+    white-space: nowrap;
   }
 
   .hero__title-rule {
@@ -863,5 +876,89 @@
   .hero__form-header,
   .hero__form-body {
     padding-inline: 11px;
+  }
+}
+
+/* Mobile: flujo vertical para que la imagen no limite el ancho del título ni
+   reserve una segunda columna vacía. */
+@media (max-width: 639px) {
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero__title {
+    width: 100%;
+    max-width: none;
+    font-size: clamp(1rem, 5.5vw, 1.6rem);
+  }
+
+  .hero__title-line {
+    white-space: nowrap;
+  }
+
+  .hero__visual {
+    display: none;
+  }
+
+  .hero__title-rule,
+  .hero__highlights,
+  .hero__social-proof,
+  .hero__form-card {
+    width: 100%;
+    margin-inline: 0;
+  }
+}
+
+/* Tablet: elimina la fila reservada para la imagen y conserva un flujo de
+   contenido compacto. La fotografía es decorativa en este ancho. */
+@media (min-width: 640px) and (max-width: 959px) {
+  .hero__content {
+    grid-template-columns: minmax(0, 1fr) minmax(19rem, .9fr);
+    grid-template-areas:
+      "title title"
+      "rule proof"
+      "highlights form";
+    gap: 18px 28px;
+    align-items: start;
+  }
+
+  .hero__copy {
+    display: contents;
+  }
+
+  .hero__title {
+    grid-area: title;
+    width: 100%;
+  }
+
+  .hero__title-rule {
+    grid-area: rule;
+    margin: 0;
+    align-self: center;
+  }
+
+  .hero__highlights {
+    grid-area: highlights;
+    margin: 0;
+  }
+
+  .hero__social-proof {
+    grid-area: proof;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+
+  .hero__visual {
+    display: none;
+  }
+
+  .hero__form-card {
+    grid-area: form;
+    width: 100%;
+    margin: 0;
+    align-self: start;
   }
 }
