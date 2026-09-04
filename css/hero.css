@@ -879,16 +879,25 @@
   }
 }
 
-/* Mobile: flujo vertical para que la imagen no limite el ancho del título ni
-   reserve una segunda columna vacía. */
+/* Mobile: las tarjetas reducen su ancho para dejar una columna visible para
+   la estudiante. El título y el resto del contenido conservan todo el ancho. */
 @media (max-width: 639px) {
   .hero__content {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(92px, .8fr);
+    grid-template-areas:
+      "title title"
+      "rule rule"
+      "highlights visual"
+      "proof proof"
+      "form form";
+    column-gap: 8px;
+    row-gap: 12px;
+    align-items: start;
   }
 
   .hero__title {
+    grid-area: title;
     width: 100%;
     max-width: none;
     font-size: clamp(1rem, 5.5vw, 1.6rem);
@@ -899,19 +908,41 @@
   }
 
   .hero__visual {
+    grid-area: visual;
     display: flex;
-    width: min(100%, 12rem);
-    margin: 0 auto;
-    align-self: center;
-    order: 0;
+    width: 100%;
+    max-width: 8.5rem;
+    margin: 0;
+    align-self: end;
+    justify-self: center;
   }
 
-  .hero__title-rule,
-  .hero__highlights,
-  .hero__social-proof,
-  .hero__form-card {
+  .hero__visual img {
     width: 100%;
-    margin-inline: 0;
+    height: auto;
+  }
+
+  .hero__title-rule {
+    grid-area: rule;
+    margin: 0;
+  }
+
+  .hero__highlights {
+    grid-area: highlights;
+    width: 100%;
+    margin: 0;
+  }
+
+  .hero__social-proof {
+    grid-area: proof;
+    width: 100%;
+    margin: 0;
+  }
+
+  .hero__form-card {
+    grid-area: form;
+    width: 100%;
+    margin: 0;
   }
 }
 
