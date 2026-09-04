@@ -899,7 +899,11 @@
   }
 
   .hero__visual {
-    display: none;
+    display: flex;
+    width: min(100%, 12rem);
+    margin: 0 auto;
+    align-self: center;
+    order: 0;
   }
 
   .hero__title-rule,
@@ -919,7 +923,8 @@
     grid-template-areas:
       "title title"
       "rule proof"
-      "highlights form";
+      "highlights form"
+      "visual form";
     gap: 18px 28px;
     align-items: start;
   }
@@ -952,7 +957,12 @@
   }
 
   .hero__visual {
-    display: none;
+    grid-area: visual;
+    display: flex;
+    width: min(100%, 17rem);
+    margin: 0 auto;
+    align-self: end;
+    justify-self: center;
   }
 
   .hero__form-card {
